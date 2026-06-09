@@ -2,7 +2,7 @@ function Navbar({ onPageChange, search, onSearchChange, user, isAdmin, onLogout,
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
-                <a className="navbar-brand">Saleh</a>
+                <a className="navbar-brand" href="javascript:void(0)">Saleh</a>
 
                 <button 
                     className="navbar-toggler border-0" 
@@ -16,54 +16,52 @@ function Navbar({ onPageChange, search, onSearchChange, user, isAdmin, onLogout,
                 <div className="collapse navbar-collapse" id="navbar1">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a 
-                                className="nav-link" 
-                                href="#" 
+                            <button
+                                className="nav-link btn btn-link"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     onPageChange('home');
                                 }}
+                                style={{ textDecoration: 'none', color: 'inherit', border: 'none', background: 'none', cursor: 'pointer' }}
                             >
                                 Home
-                            </a>
+                            </button>
                         </li>
 
                         {isAdmin && (
                             <li className="nav-item">
-                                <a 
-                                    className="nav-link bg-warning text-dark rounded" 
-                                    href="#" 
+                                <button
+                                    className="nav-link bg-warning text-dark rounded"
                                     onClick={(e) => {
                                         e.preventDefault();
                                         onPageChange('admin');
                                     }}
-                                    style={{ margin: '0 5px' }}
+                                    style={{ margin: '0 5px', border: 'none', background: '#ffc107', cursor: 'pointer' }}
                                 >
                                     📊 Admin Dashboard
-                                </a>
+                                </button>
                             </li>
                         )}
 
                         <li className="nav-item">
-                            <a 
-                                className="nav-link" 
-                                href="#" 
+                            <button
+                                className="nav-link btn btn-link"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     onPageChange('credits');
                                 }}
+                                style={{ textDecoration: 'none', color: 'inherit', border: 'none', background: 'none', cursor: 'pointer' }}
                             >
                                 Credits
-                            </a>
+                            </button>
                         </li>
 
                         <li className="nav-item dropdown">
                             <a 
                                 className="nav-link dropdown-toggle" 
                                 role="button" 
-                                data-bs-toggle="dropdown" 
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
+                                href="javascript:void(0)"
+                                data-bs-toggle="dropdown"
                             >
                                 Contact Us
                             </a>
